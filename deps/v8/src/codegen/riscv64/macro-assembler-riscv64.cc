@@ -4182,7 +4182,7 @@ void MacroAssembler::JumpToOffHeapInstructionStream(Address entry) {
   if (!FLAG_riscv_constant_pool) {
     li(kOffHeapTrampolineRegister, Operand(entry, RelocInfo::OFF_HEAP_TARGET));
   } else {
-    RecordEntry(entry, RelocInfo::OFF_HEAP_TARGET);
+    RecordEntry(static_cast<uint64_t>(entry), RelocInfo::OFF_HEAP_TARGET);
     RecordRelocInfo(RelocInfo::OFF_HEAP_TARGET, entry);
     auipc(kOffHeapTrampolineRegister, 0);
     ld(kOffHeapTrampolineRegister, kOffHeapTrampolineRegister, 0);
