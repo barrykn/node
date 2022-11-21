@@ -594,7 +594,7 @@ void OS::DestroySharedMemoryHandle(PlatformSharedMemoryHandle handle) {
 
 // static
 bool OS::HasLazyCommits() {
-#if V8_OS_AIX || V8_OS_LINUX || V8_OS_DARWIN
+#if V8_OS_AIX || V8_OS_LINUX || V8_OS_DARWIN || V8_OS_OPENBSD
   return true;
 #else
   // TODO(bbudge) Return true for all POSIX platforms.
