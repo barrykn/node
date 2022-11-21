@@ -12,7 +12,7 @@
       'includes': ['config/archs/linux-aarch64/asm/openssl.gypi'],
     }, 'target_arch=="arm64" and OS=="mac"', {
       'includes': ['config/archs/darwin64-arm64-cc/asm/openssl.gypi'],
-    }, 'target_arch=="ia32" and OS=="freebsd"', {
+    }, 'target_arch=="ia32" and OS in ["freebsd", "openbsd"]', {
       'includes': ['config/archs/BSD-x86/asm/openssl.gypi'],
     }, 'target_arch=="ia32" and OS=="linux"', {
       'includes': ['config/archs/linux-elf/asm/openssl.gypi'],
@@ -40,7 +40,7 @@
       ],
     }, 'target_arch=="ia32"', {
       'includes': ['config/archs/linux-elf/asm/openssl.gypi'],
-    }, 'target_arch=="x64" and OS=="freebsd"', {
+    }, 'target_arch=="x64" and OS in ["freebsd", "openbsd"]', {
       'includes': ['config/archs/BSD-x86_64/asm/openssl.gypi'],
     }, 'target_arch=="x64" and OS=="mac"', {
       'includes': ['config/archs/darwin64-x86_64-cc/asm/openssl.gypi'],

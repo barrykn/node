@@ -11,7 +11,7 @@
       'includes': ['config/archs/linux-armv4/no-asm/openssl-fips.gypi'],
     }, 'target_arch=="arm64" and OS in ("linux", "android")', {
       'includes': ['config/archs/linux-aarch64/no-asm/openssl-fips.gypi'],
-    }, 'target_arch=="ia32" and OS=="freebsd"', {
+    }, 'target_arch=="ia32" and OS in ["freebsd", "openbsd"]', {
       'includes': ['config/archs/BSD-x86/no-asm/openssl-fips.gypi'],
     }, 'target_arch=="ia32" and OS=="linux"', {
       'includes': ['config/archs/linux-elf/no-asm/openssl-fips.gypi'],
@@ -24,7 +24,7 @@
     }, 'target_arch=="ia32"', {
       # noasm linux-elf for other ia32 platforms
       'includes': ['config/archs/linux-elf/no-asm/openssl-fips.gypi'],
-    }, 'target_arch=="x64" and OS=="freebsd"', {
+    }, 'target_arch=="x64" and OS in ["freebsd", "openbsd"]', {
       'includes': ['config/archs/BSD-x86_64/no-asm/openssl-fips.gypi'],
     }, 'target_arch=="x64" and OS=="mac"', {
       'includes': ['config/archs/darwin64-x86_64-cc/no-asm/openssl-fips.gypi'],

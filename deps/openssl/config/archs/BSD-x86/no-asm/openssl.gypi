@@ -779,7 +779,6 @@
       'openssl/crypto/x509/x_x509.c',
       'openssl/crypto/x509/x_x509a.c',
       'openssl/engines/e_capi.c',
-      'openssl/engines/e_devcrypto.c',
       'openssl/engines/e_padlock.c',
       'openssl/providers/baseprov.c',
       'openssl/providers/defltprov.c',
