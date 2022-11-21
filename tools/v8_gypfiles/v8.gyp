@@ -821,7 +821,7 @@
             }],
             ['v8_enable_webassembly==1', {
               'conditions': [
-                ['OS=="linux" or OS=="mac" or OS=="ios" or OS=="freebsd"', {
+                ['OS=="linux" or OS=="mac" or OS=="ios" or OS=="freebsd" or OS=="openbsd"', {
                   'sources': [
                     '<!@pymod_do_main(GN-scraper "<(V8_ROOT)/BUILD.gn"  "\\"v8_base_without_compiler.*?v8_current_cpu == \\"x64\\".*?v8_enable_webassembly.*?is_linux.*?sources \\+= ")',
                   ],
