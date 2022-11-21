@@ -123,7 +123,6 @@ void OS::SignalCodeMovingGC() {
 
 void OS::AdjustSchedulingParams() {}
 
-// static
 Stack::StackSlot Stack::GetStackStart() {
   stack_t ss;
   void *base;
