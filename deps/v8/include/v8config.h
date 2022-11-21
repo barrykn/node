@@ -171,6 +171,7 @@ path. Add it with -I<path> to the command line
 //  V8_TARGET_OS_FUCHSIA
 //  V8_TARGET_OS_IOS
 //  V8_TARGET_OS_LINUX
+//  V8_TARGET_OS_OPENBSD
 //  V8_TARGET_OS_MACOS
 //  V8_TARGET_OS_WIN
 //
@@ -183,6 +184,7 @@ path. Add it with -I<path> to the command line
   && !defined(V8_TARGET_OS_FUCHSIA) \
   && !defined(V8_TARGET_OS_IOS) \
   && !defined(V8_TARGET_OS_LINUX) \
+  && !defined(V8_TARGET_OS_OPENBSD) \
   && !defined(V8_TARGET_OS_MACOS) \
   && !defined(V8_TARGET_OS_WIN)
 #  error No known target OS defined.
@@ -194,6 +196,7 @@ path. Add it with -I<path> to the command line
   || defined(V8_TARGET_OS_FUCHSIA) \
   || defined(V8_TARGET_OS_IOS) \
   || defined(V8_TARGET_OS_LINUX) \
+  || defined(V8_TARGET_OS_OPENBSD) \
   || defined(V8_TARGET_OS_MACOS) \
   || defined(V8_TARGET_OS_WIN)
 #  error A target OS is defined but V8_HAVE_TARGET_OS is unset.
@@ -216,6 +219,10 @@ path. Add it with -I<path> to the command line
 # define V8_TARGET_OS_LINUX
 #endif
 
+#ifdef V8_OS_OPENBSD
+# define V8_TARGET_OS_OPENBSD
+#endif
+
 #ifdef V8_OS_MACOS
 # define V8_TARGET_OS_MACOS
 #endif
@@ -234,6 +241,8 @@ path. Add it with -I<path> to the command line
 # define V8_TARGET_OS_STRING "ios"
 #elif defined(V8_TARGET_OS_LINUX)
 # define V8_TARGET_OS_STRING "linux"
+#elif defined(V8_TARGET_OS_OPENBSD)
+# define V8_TARGET_OS_STRING "openbsd"
 #elif defined(V8_TARGET_OS_MACOS)
 # define V8_TARGET_OS_STRING "macos"
 #elif defined(V8_TARGET_OS_WINDOWS)
