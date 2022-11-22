@@ -413,9 +413,7 @@
           }],
           ['OS=="openbsd"', {
             'cflags': [ '-I/usr/local/include' ],
-            'ldflags': [ '-Wl,-z,wxneeded'
-                , '-Wl,-rpath,${EOPENSSL_LIB}'
-            ],
+            'ldflags': [ '-Wl,-z,wxneeded' ],
           }],
         ],
         'conditions': [
